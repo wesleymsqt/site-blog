@@ -5,20 +5,20 @@ import { PT_Sans_Caption } from "next/font/google";
 
 export const CallToAction = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-cyan-950/20 to-gray-700">
-      <div className="container">
+    <section className="relative py-24 bg-gradient-to-b from-cyan-950/20 to-gray-700">
+      <div className="absolute inset-0 hidden md:block bg-[url('/background-feature.svg')] bg-cover bg-center bg-no-repeat opacity-90" />
+
+      <div className="container relative">
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="p-4 bg-cyan-300 w-fit rounded-full">
-            <Store className="text-cyan-100" width={60} height={40}/>
+            <Store className="text-cyan-100" width={60} height={40} />
           </div>
 
-          <h2
-            className="font-sans text-gray-100 text-balance text-heading-xl"
-          >
+          <h2 className="font-sans text-gray-100 text-balance text-heading-xl">
             Crie uma loja online e inicie suas vendas ainda hoje
           </h2>
 
-          <Button variant={"primary"} asChild className="mt-6"> 
+          <Button variant={"primary"} asChild className="mt-6">
             <Link href="/criar-loja">
               Criar loja gratis
               <ArrowRight />
