@@ -3,11 +3,6 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { PT_Sans_Caption } from "next/font/google";
 
-const ptSansCaption = PT_Sans_Caption({
-  subsets: ["latin"],
-  weight: "700",
-});
-
 export const CallToAction = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-cyan-950/20 to-gray-700">
@@ -18,7 +13,7 @@ export const CallToAction = () => {
           </div>
 
           <h2
-            className={`${ptSansCaption.className} text-gray-100 text-balance text-heading-xl`}
+            className="font-sans text-gray-100 text-balance text-heading-xl"
           >
             Crie uma loja online e inicie suas vendas ainda hoje
           </h2>
