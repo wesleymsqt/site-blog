@@ -27,7 +27,18 @@ export function BlogList() {
         </div>
       </header>
 
-      <PostCard />
+      <PostCard 
+        title="lorem ipsum"
+        description="lorem"
+        date="lorem"
+        image="/blog-post-01.png"
+        slug="lorem-ipsum"
+        author={{
+          avatar: '/customer-01.jpg',
+          name: 'John Doe'
+
+        }}
+      />
     </div>
   );
 }
