@@ -5,49 +5,51 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <section className="container relative flex items-center justify-center mt-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[20rem] md:h-[36rem] items-center">
-        <div className="flex flex-col items-center justify-center gap-4 md:items-start lg:items-start">
-          <h1 className="text-gray-100 text-heading-hg font-sans">
-            Venda seus produtos como afiliado em um unico lugar
+    <section className="container relative mt-16 flex items-center justify-center">
+      <div className="grid min-h-[20rem] grid-cols-1 items-center gap-8 md:h-[36rem] md:grid-cols-2">
+        <div className="flex flex-col items-center justify-center gap-4 md:items-start">
+          <h1 className="text-heading-hg text-gray-100 font-sans text-center md:text-left">
+            Venda seus produtos como afiliado em um único lugar
           </h1>
 
-          <div className="flex flex-col items-center justify-center gap-4 md:items-start lg:items-start">
+          <div className="flex flex-col items-center justify-center gap-4 md:items-start">
             <div className="flex items-center gap-2">
-              <Clock className="text-cyan-100 h-4 w-4" />
+              <Clock className="h-4 w-4 text-cyan-100" />
               <span className="text-body-md text-gray-200">
                 Crie o seu site em menos de 5 minutos
               </span>
             </div>
 
             <div className="flex items-center gap-2">
-              <Store className="text-cyan-100 h-4 w-4" />
+              <Store className="h-4 w-4 text-cyan-100" />
               <span className="text-body-md text-gray-200">
-                Acompanhe e otimize seu negocio online
+                Acompanhe e otimize seu negócio online
               </span>
             </div>
 
-            <div className="text-white flex flex-col gap-2 mt-5 items-center md:items-start lg:items-start">
-              <Button className="rounded-full w-fit" asChild>
-                <Link href="criar-loja">
+            <div className="mt-5 flex flex-col items-center gap-2 text-white md:items-start">
+              <Button className="w-fit rounded-full" asChild>
+                <Link href="/criar-loja">
+                  {" "}
                   Criar loja grátis
-                  <ArrowBigRight />
+                  <ArrowBigRight className="ml-2 h-4 w-4" />{" "}
                 </Link>
               </Button>
-              <p className="text-gray-300 text-body-xs">
+              <p className="text-body-xs text-gray-300">
                 Não precisa de cartão de crédito
               </p>
             </div>
           </div>
         </div>
 
-        <div className="relative h-[20rem] hidden md:h-full order-first md:order-last items-center justify-center md:flex lg:flex">
+        <div className="relative hidden h-full w-full items-center justify-center md:flex">
           <Image
-            src="/hero-section.svg"
-            alt="Ilustração com ícones de dollar, clock e mai"
-            width={200}
-            height={400}
+            src="/assets/landing-page/hero-section.svg"
+            alt="Ilustração da plataforma Site.Set"
+            width={600}
+            height={600}
             className="h-full w-auto object-contain"
+            priority
           />
         </div>
       </div>
